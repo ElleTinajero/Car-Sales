@@ -1,5 +1,6 @@
 import React from 'react';
 
+import { connect } from 'react-redux';
 import Header from './components/Header';
 import AddedFeatures from './components/AddedFeatures';
 import AdditionalFeatures from './components/AdditionalFeatures';
@@ -45,4 +46,9 @@ const App = () => {
   );
 };
 
-export default App;
+
+// wrap the component export in the connect function
+//pass the component that we want to connect into the second call
+//the first call will taje inb a function and an object
+
+export default connect(() => {}, {})(App); // function currying
